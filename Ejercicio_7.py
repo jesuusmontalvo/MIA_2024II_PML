@@ -17,7 +17,12 @@ def cantidad_palabras_con_vocales(texto):
     for palabra in texto.split():
         if cantidad_de_vocales_diferentes_en_palabra(palabra) == n:
             count += 1
-    print(count)
+    return (count, n)
+
+def main(texto):
+    resultados = cantidad_palabras_con_vocales(texto)
+    print(f"Hay {resultados[0]} palabras con {resultados[1]} vocales diferentes")
+
 
 texto = "Mis primos tienen casi 40 anios yo tengo 34 y tenemos que jugar pelota con gente de 18 esta bien dificil ganar"
-cantidad_palabras_con_vocales(texto)
+main(texto)
